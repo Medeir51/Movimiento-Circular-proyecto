@@ -1,0 +1,284 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  font-size: 1.3rem;
+}
+
+.mode {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.field input {
+  min-height: 42px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-weight: 400;
+  min-width: 200px;
+}
+
+.field input.small {
+  min-width: 0;
+  width: 7em;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  cursor: pointer;
+}
+
+.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.templates {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin: 0;
+  padding: 8px 12px;
+}
+
+.templates legend {
+  font-weight: 700;
+  padding: 0 4px;
+}
+
+.templateButtons {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.templateList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2px 12px;
+}
+
+.templateItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.sessionTitle {
+  font-size: 1.1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr));
+  gap: 12px;
+}
+
+.card {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardHeader h3 {
+  font-size: 1rem;
+}
+
+.code {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary-strong);
+}
+
+.statement {
+  font-size: 1rem;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+}
+
+.questions {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.qLabel {
+  font-weight: 600;
+}
+
+.answerRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.answer {
+  flex: 1;
+  min-width: 120px;
+  min-height: 42px;
+  padding: 6px 10px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.answerOk {
+  border: 2px solid var(--success);
+}
+
+.answerBad {
+  border: 2px solid var(--error);
+}
+
+.helpRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.score {
+  font-weight: 700;
+  color: var(--primary-strong);
+}
+
+.cardActions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sheet {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sheet h3 {
+  font-size: 1.1rem;
+  border-bottom: 2px solid var(--border-strong);
+  padding-bottom: 4px;
+}
+
+.sheetList {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sheetQuestions {
+  margin: 4px 0 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blank {
+  display: block;
+  color: var(--text-soft);
+  margin-top: 4px;
+}
+
+.key h4 {
+  margin: 10px 0 4px;
+}
+
+.keyTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.keyTable th,
+.keyTable td {
+  border: 1px solid var(--border);
+  padding: 4px 6px;
+  text-align: left;
+}
+
+.keyTable td.num,
+.keyTable td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media print {
+  .sheet {
+    gap: 6px;
+  }
+
+  .blank {
+    color: #000;
+    margin-top: 10px;
+  }
+}

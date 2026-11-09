@@ -1,0 +1,191 @@
+.panel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.title {
+  font-size: 1.05rem;
+}
+
+.unitSel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+}
+
+.unitSel select {
+  min-height: 32px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  padding: 2px 6px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.single {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+}
+
+.tab {
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tab[aria-pressed='true'] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.caption {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: var(--font);
+  user-select: none;
+  touch-action: none;
+}
+
+.gridLine {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: var(--text-soft);
+  stroke-width: 1.2;
+}
+
+.tickX,
+.tickY,
+.axisLabel {
+  fill: var(--text-muted);
+  font-size: 10px;
+}
+
+.tickX {
+  text-anchor: middle;
+}
+
+.tickY {
+  text-anchor: end;
+  dominant-baseline: middle;
+}
+
+.axisLabel {
+  text-anchor: middle;
+}
+
+.cursor {
+  stroke: var(--text);
+  stroke-width: 1.5;
+}
+
+.marker {
+  stroke: var(--text-soft);
+  stroke-width: 1.2;
+  stroke-dasharray: 3 3;
+}
+
+.markerText {
+  fill: var(--text-muted);
+  font-size: 10px;
+}
+
+.hoverLine {
+  stroke: var(--text-soft);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+.tooltipBox {
+  fill: var(--surface);
+  stroke: var(--border-strong);
+}
+
+.tooltipText {
+  fill: var(--text);
+  font-size: 10px;
+}
+
+.hit {
+  cursor: crosshair;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legendSwatch {
+  width: 16px;
+  border-top: 3px solid;
+}
+
+.note {
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+@media (max-width: 1279px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,203 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+}
+
+.timeBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--primary-soft);
+  color: var(--primary-strong);
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+.timeSelect select {
+  min-height: 34px;
+  padding: 2px 6px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-size: 0.88rem;
+}
+
+.strobe {
+  flex-basis: 100%;
+}
+
+.canvasWrap {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas {
+  display: block;
+  border-radius: var(--radius-sm);
+  background: var(--canvas-bg);
+  border: 1px solid var(--border);
+  touch-action: manipulation;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.slider {
+  flex: 1;
+  min-width: 140px;
+  accent-color: var(--primary);
+  min-height: 32px;
+}
+
+.tau {
+  min-width: 7em;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.display {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+}
+
+.dim {
+  opacity: 0.6;
+}
+
+.swatch {
+  width: 18px;
+  height: 0;
+  border-top: 4px solid;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.swatchDashed {
+  border-top-style: dashed;
+}
+
+.presetCard {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.presetCard h3 {
+  font-size: 1rem;
+}
+
+.question {
+  font-weight: 600;
+  color: var(--primary-strong);
+}
+
+@media (max-width: 767.98px) {
+  .canvasWrap {
+    max-width: min(100%, 40vh);
+  }
+
+  .slider {
+    min-height: 36px;
+  }
+
+  .controls {
+    gap: 4px 6px;
+    flex-wrap: nowrap;
+  }
+
+  .buttons :global(.btn) {
+    min-width: 34px;
+    min-height: 34px;
+    padding: 4px;
+  }
+
+  .slider {
+    min-width: 60px;
+  }
+
+  .tau {
+    min-width: 0;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .timeBar {
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .badge {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .timeSelect {
+    min-width: 0;
+  }
+
+  .timeSelect select {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .check {
+    font-size: 0.82rem;
+  }
+}
+
+/* Barra fija del celular: el lienzo ocupa el alto que quede libre. */
+.canvasWrapFill {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+}

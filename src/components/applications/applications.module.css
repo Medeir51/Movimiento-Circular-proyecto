@@ -1,0 +1,162 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  font-size: 1.3rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tab {
+  min-height: 42px;
+  padding: 4px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab[aria-selected='true'] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--on-primary);
+}
+
+.appGrid {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) minmax(0, 1fr) minmax(300px, 420px);
+  gap: 12px;
+  align-items: start;
+}
+
+.panel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.panel h3 {
+  font-size: 1.05rem;
+}
+
+.stepsCard {
+  min-width: 0;
+}
+
+.quick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick button[aria-pressed='true'] {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+
+.quickLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.outList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.outRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 4px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+
+.outRow dt {
+  font-weight: 600;
+}
+
+.outRow dd {
+  margin: 0;
+  text-align: right;
+}
+
+.selectField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.selectField select {
+  min-height: 40px;
+  padding: 4px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.diagram {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font);
+}
+
+.diagramTitle {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--text-muted);
+}
+
+.diagramLabel {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.diagramSmall {
+  font-size: 11px;
+  fill: var(--text-muted);
+}
+
+.orbitCanvas {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 1279px) {
+  .appGrid {
+    grid-template-columns: minmax(260px, 340px) minmax(0, 1fr);
+  }
+
+  .stepsCard {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .appGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

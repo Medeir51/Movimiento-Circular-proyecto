@@ -1,0 +1,70 @@
+/* Hoja de estilos de impresión: tamaño carta, blanco y negro legible, sin menús ni botones. */
+@page {
+  size: letter;
+  margin: 16mm 15mm;
+}
+
+@media print {
+  :root,
+  :root[data-theme='dark'] {
+    color-scheme: light;
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --text: #000000;
+    --text-muted: #222222;
+    --text-soft: #333333;
+    --border: #999999;
+    --border-strong: #666666;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  .no-print,
+  header,
+  nav,
+  .skip-link {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-sheet {
+    break-after: page;
+    page-break-after: always;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .print-sheet:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .print-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .card {
+    box-shadow: none !important;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+}
